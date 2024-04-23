@@ -40,8 +40,8 @@
 const t_menu_item MenuList[] =
 {
 //   text,          menu ID
-	{"Step",		MENU_STEP          },
-	{"TxPwr",		MENU_TXP           }, // was "TXP"
+	{"Etape",		MENU_STEP          },
+	{"PUISS",		MENU_TXP           }, // was "TXP"
 	{"RxDCS",		MENU_R_DCS         }, // was "R_DCS"
 	{"RxCTCS",		MENU_R_CTCS        }, // was "R_CTCS"
 	{"TxDCS",		MENU_T_DCS         }, // was "T_DCS"
@@ -54,7 +54,7 @@ const t_menu_item MenuList[] =
 #endif
 	{"BusyCL",		MENU_BCL           }, // was "BCL"
 	{"Compnd",		MENU_COMPAND       },
-	{"Demodu",		MENU_AM            }, // was "AM"
+	{"Modul",		MENU_AM            }, // was "AM"
 	{"ScAdd1",		MENU_S_ADD1        },
 	{"ScAdd2",		MENU_S_ADD2        },
 	{"ChSave",		MENU_MEM_CH        }, // was "MEM-CH"
@@ -68,9 +68,9 @@ const t_menu_item MenuList[] =
 #ifdef ENABLE_NOAA
 	{"NOAA-S",		MENU_NOAA_S        },
 #endif
-	{"F1Shrt",		MENU_F1SHRT        },
+	{"F1Court",		MENU_F1SHRT        },
 	{"F1Long",		MENU_F1LONG        },
-	{"F2Shrt",		MENU_F2SHRT        },
+	{"F2Court",		MENU_F2SHRT        },
 	{"F2Long",		MENU_F2LONG        },
 	{"M Long",		MENU_MLONG         },
 
@@ -90,12 +90,12 @@ const t_menu_item MenuList[] =
 	{"BLTxRx",		MENU_ABR_ON_TX_RX  },
 	{"Beep",		MENU_BEEP          },
 #ifdef ENABLE_VOICE
-	{"Voice",		MENU_VOICE         },
+	{"Voix",		MENU_VOICE         },
 #endif
 	{"Roger",		MENU_ROGER         },
 	{"STE",			MENU_STE           },
 	{"RP STE",		MENU_RP_STE        },
-	{"1 Call",		MENU_1_CALL        },
+	{"Appel",		MENU_1_CALL        },
 #ifdef ENABLE_ALARM
 	{"AlarmT",		MENU_AL_MOD        },
 #endif
@@ -123,7 +123,7 @@ const t_menu_item MenuList[] =
 	{"VOX",			MENU_VOX           },
 #endif
 #ifdef ENABLE_FEAT_F4HWN
-	{"SysInf",		MENU_VOL           }, // was "VOL"
+	{"Info",		MENU_VOL           }, // was "VOL"
 #else
 	{"BatVol",		MENU_VOL           }, // was "VOL"
 #endif
@@ -164,9 +164,9 @@ const uint8_t FIRST_HIDDEN_MENU_ITEM = MENU_F_LOCK;
 
 const char gSubMenu_TXP[][5] =
 {
-	"LOW",
-	"MID",
-	"HIGH"
+	"BAS",
+	"MOY",
+	"HAUT"
 };
 
 const char gSubMenu_SFT_D[][4] =
@@ -210,7 +210,7 @@ const char* const gSubMenu_RXMode[] =
 	{
 		"OFF",
 		"CHI",
-		"ENG"
+		"ANG"
 	};
 #endif
 
@@ -225,8 +225,8 @@ const char* const gSubMenu_MDF[] =
 {
 	"FREQ",
 	"CHANNEL\nNUMBER",
-	"NAME",
-	"NAME\n+\nFREQ"
+	"NOM",
+	"NOM\n+\nFREQ"
 };
 
 #ifdef ENABLE_ALARM
@@ -259,14 +259,14 @@ const char* const gSubMenu_PTT_ID[] =
 const char gSubMenu_PONMSG[][8] =
 {
 #ifdef ENABLE_FEAT_F4HWN
-	"ALL",
-	"SOUND",
+	"TOUT",
+	"SONS",
 #else
-	"FULL",
+	"TOUT",
 #endif
 	"MESSAGE",
 	"VOLTAGE",
-	"NONE"
+	"RIEN"
 };
 
 const char gSubMenu_ROGER[][6] =
@@ -279,7 +279,7 @@ const char gSubMenu_ROGER[][6] =
 const char gSubMenu_RESET[][4] =
 {
 	"VFO",
-	"ALL"
+	"TOUT"
 };
 
 const char * const gSubMenu_F_LOCK[] =
@@ -354,9 +354,9 @@ const char gSubMenu_SCRAMBLER[][7] =
 	const char gSubMenu_SET_TOT[][7] =	// Use by SET_EOT too
 	{
 		"OFF",
-		"SOUND",
-		"VISUAL",
-		"ALL"
+		"SONS",
+		"VISUEL",
+		"TOUT"
 	};
 
 	const char gSubMenu_SET_LCK[][9] =
@@ -367,7 +367,7 @@ const char gSubMenu_SCRAMBLER[][7] =
 
 	const char gSubMenu_SET_MET[][8] =
 	{
-		"TINY",
+		"PETIT",
 		"CLASSIC"
 	};
 #endif
@@ -378,7 +378,7 @@ const t_sidefunction gSubMenu_SIDEFUNCTIONS[] =
 #ifdef ENABLE_FLASHLIGHT
 	{"FLASH\nLIGHT",	ACTION_OPT_FLASHLIGHT},
 #endif
-	{"POWER",			ACTION_OPT_POWER},
+	{"PUISS",			ACTION_OPT_POWER},
 	{"MONITOR",			ACTION_OPT_MONITOR},
 	{"SCAN",			ACTION_OPT_SCAN},
 #ifdef ENABLE_VOX
@@ -388,7 +388,7 @@ const t_sidefunction gSubMenu_SIDEFUNCTIONS[] =
 	{"ALARM",			ACTION_OPT_ALARM},
 #endif
 #ifdef ENABLE_FMRADIO
-	{"FM RADIO",		ACTION_OPT_FM},
+	{"RADIO FM",		ACTION_OPT_FM},
 #endif
 #ifdef ENABLE_TX1750
 	{"1750Hz",			ACTION_OPT_1750},
