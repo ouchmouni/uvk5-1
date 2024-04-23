@@ -63,7 +63,7 @@ void UI_DisplayScanner(void)
 		bCentered = 0;
 
 		if (gScannerSaveState == SCAN_SAVE_CHAN_SEL) {
-			strcpy(String, "SAVE:");
+			strcpy(String, "ENREG:");
 			UI_GenerateChannelStringEx(String + 5, gShowChPrefix, gScanChannel);
 			pPrintStr = String;
 		} else if (gScanCssState < SCAN_CSS_STATE_FOUND) {
