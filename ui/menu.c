@@ -40,7 +40,7 @@
 const t_menu_item MenuList[] =
 {
 //   text,          menu ID
-	{"Etape",		MENU_STEP          },
+	{"Etap",		MENU_STEP          },
 	{"PUISS",		MENU_TXP           }, // was "TXP"
 	{"RxDCS",		MENU_R_DCS         }, // was "R_DCS"
 	{"RxCTCS",		MENU_R_CTCS        }, // was "R_CTCS"
